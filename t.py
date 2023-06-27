@@ -4,7 +4,7 @@ import argparse
 def grant_access(public_key, private_key, servers, user):
     for server in servers:
         try:
-            # Create an SSH client and connect to the server
+            #Create an SSH client and connect to the server
             ssh_client = paramiko.SSHClient()
             ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             ssh_client.connect(server, username=user, pkey=private_key)
